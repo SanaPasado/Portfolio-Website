@@ -1,0 +1,114 @@
+
+.project-card {
+  transition: box-shadow 0.3s, background 0.3s, max-height 0.7s cubic-bezier(0.4,0,0.2,1);
+  max-height: 350px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  cursor: pointer;
+  border-radius: 0 !important;
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+  border: 0 !important;
+}
+
+.project-card:hover:not(.hovered) {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 16/10;
+}
+
+
+.project-card.hovered {
+  max-height: 600px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  background: #f8f9fa;
+}
+
+.project-extra-info {
+  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1), max-height 1s cubic-bezier(0.4,0,0.2,1);
+  opacity: 0;
+  max-height: 0px;
+  overflow: hidden;
+  will-change: opacity, max-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;  
+  padding-bottom: 20px;  
+}
+
+.project-card.hovered .project-extra-info {
+  opacity: 1;
+  max-height: 180px;
+  min-height: 90px;
+}
+.tech-badges {
+  display: none;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-card.hovered .tech-badges {
+  display: flex;
+}
+
+.tech-badge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3em 0.9em;
+  border-radius: 20px;
+  border: 2px solid;
+  background: #353030;
+  display: inline-block;
+}
+
+.tech-badge.frontend {
+  color: #ffffff;
+}
+
+.tech-badge.backend {
+  color: #dadbdd;
+
+}
+
+.project-desc {
+  transition:all 3s;
+  opacity: 1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+}
+
+.project-desc.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.projects-heading {
+  font-size: 4rem;
+  margin-bottom: 3rem !important;
+  letter-spacing: 2px;
+  font-weight: 900;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+Card.Body {
+  padding: 1.5rem;
+}
+
+Card.Body .card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}

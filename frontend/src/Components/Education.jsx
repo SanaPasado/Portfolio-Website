@@ -1,0 +1,68 @@
+import React from 'react'
+import "./Education.css"
+import { Card, Col, Row, Button } from 'react-bootstrap'
+import AboutMe from './AboutMe'
+
+function Education() {
+  return (
+    <div>
+      <Card.Title className='border-top d-flex justify-content-center fs-1
+       py-3 inter-tight text-uppercase text-white'></Card.Title>
+      <Row>
+        
+        <Col md={12}>
+        <Card.Title className='pb-3  d-flex justify-content-center fs-1
+    anton-regular text-uppercase text-white'>Education</Card.Title>
+          <Card className="r-0 education-card" style={{ backgroundColor: '#1a1a1a', padding: '2rem', borderRadius: '8px', minHeight: '250px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+            {/* Current Badge */}
+            <div style={{ textAlign: 'right', marginBottom: '1rem' }}>
+              <span className="montserrat text-white" style={{ backgroundColor: 'rgba(255, 255, 255, 0.1)', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '12px', fontWeight: '600' }}>
+                Current
+              </span>
+            </div>
+
+            {/* Education Details */}
+            <div>
+              <p className="montserrat text-white" style={{ margin: '0 0 0.5rem 0', fontSize: '14px', fontWeight: '600' }}>
+                Student
+              </p>
+              <h3 className="anton-regular text-white" style={{ margin: '0 0 0.5rem 0', fontSize: '24px' }}>
+                Holy Angel University
+              </h3>
+              <p className="montserrat text-white" style={{ margin: '0 0 1.5rem 0', fontSize: '14px', opacity: 0.7 }}>
+                Angeles City, Philippines
+              </p>
+
+              <p className="montserrat text-white" style={{ margin: '0 0 1.5rem 0', fontSize: '14px', lineHeight: '1.6' }}>
+                Bachelor of Science in Computer Engineering
+              </p>
+
+              <p className="montserrat text-white" style={{ margin: 0, fontSize: '12px', opacity: 0.8 }}>
+                Aug 2024 → Present
+              </p>
+
+                <Col md={6}>
+         
+
+
+
+
+             </Col>
+
+
+
+
+
+
+
+            </div>
+          </Card>
+        </Col>
+        
+    
+      </Row>
+    </div>
+  )
+}
+
+export default Education
