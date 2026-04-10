@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Row,  } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import { Facebook, Instagram, Linkedin, Github } from "react-bootstrap-icons";
 function Socials() {
   return (
