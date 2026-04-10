@@ -55,3 +55,35 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .tech-list {
+    gap: 0.5rem;
+  }
+
+  .tech-item {
+    padding: 0.5rem;
+  }
+
+  .tech-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .tech-name {
+    font-size: 0.7rem;
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 577px) {
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tech-name {
+    font-size: 0.85rem;
+  }
+}

@@ -6,13 +6,13 @@ function AboutMe() {
   return (
     <div>
     <Row className="d-flex justify-content-center">
-      <Col md={6} xl= {12}>
+      <Col xs={12} md={6}>
         <Card className="bg-dark text-white border">
           <Card.Img src="/pcpic.png" alt="About Me" style={{ opacity: 0.7 }} />
         </Card>
       </Col>
       
-      <Col md={6} xl={12} className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: "100%" }}>
+      <Col xs={12} md={6} className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: "100%" }}>
         <Card.Body>
           <Card.Title className="fs-1 anton-regular text-uppercase text-white text-start">
             About Me

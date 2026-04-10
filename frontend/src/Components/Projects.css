@@ -1,6 +1,6 @@
 
 .project-card {
-  transition: box-shadow 0.3s, background 0.3s, max-height 0.7s cubic-bezier(0.4,0,0.2,1);
+  transition: box-shadow 0.3s, background 0.3s, transform 0.3s, max-height 0.7s cubic-bezier(0.4,0,0.2,1);
   max-height: 350px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -13,7 +13,8 @@
 }
 
 .project-card:hover:not(.hovered) {
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
@@ -22,8 +23,20 @@
   aspect-ratio: 16/10;
 }
 
+/* Project card title - expand on hover */
+.project-card .card-title {
+  transition: padding 0.3s ease, transform 0.3s ease;
+
+}
+
+.project-card:hover .card-title {
+  padding: 1.5rem 1rem !important;
+  transform: translateY(-10px);
+}
+
 
 .project-card.hovered {
+  transform: translateY(-10px);
   max-height: 600px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   background: #f8f9fa;
@@ -95,20 +108,29 @@
 }
 
 .projects-heading {
-  font-size: 4rem;
-  margin-bottom: 3rem !important;
+  font-size: clamp(24px, 8vw, 64px);
+  margin-bottom: 2rem !important;
   letter-spacing: 2px;
-  font-weight: 900;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-Card.Body {
-  padding: 1.5rem;
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .project-card {
+    max-height: 300px;
+  }
+
+  .project-card.hovered {
+    max-height: 500px;
+  }
+
+  .project-image {
+    aspect-ratio: 4/3;
+  }
 }
 
-Card.Body .card-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  margin-bottom: 0.5rem;
+/* Tablet */
+@media (min-width: 577px) and (max-width: 992px) {
+  .project-image {
+    aspect-ratio: 16/10;
+  }
 }

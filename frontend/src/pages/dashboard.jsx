@@ -8,19 +8,29 @@ import {Container, Row, Col, Card} from "react-bootstrap"
 import Particlesbg from '../Components/Particlesbg'
 import AboutMe from '../Components/AboutMe'
 import { ArrowUpShort } from 'react-bootstrap-icons'
+import { useEffect, useRef } from 'react'
+import gsap from "gsap"
 
 
+function Dashboard() {
+	const leftColRef = useRef(null)
+	const rightColRef = useRef(null)
 
-function dashboard() {
+	useEffect(() => {
+		
+		gsap.from(leftColRef.current, {x: -100, opacity: 0, duration: 1 })
+		gsap.from(rightColRef.current, {x: 100, opacity: 0, duration: 1, })
+	}, []);
+
 	return (
 		<div style={{ position: 'relative', minHeight: '100vh' }}>
 			<Particlesbg />
 			<Container fluid className="d-flex flex-column align-items-center justify-content-center" style={{ position: 'relative', zIndex: 1, paddingTop: '80px' }}>
 				<section id="home" className="w-100">
-					<Navbar />
-					<Row className="justify-content-center">
+					<Navbar/>
+					<Row className="justify-content-center pt-5">
 						{/* *1st tri column */}
-						<Col md={6}>
+						<Col ref = {leftColRef} md={6}>
 							<Row>
 								<Col className="d-flex flex-column align-items-center">
 									<span className="fw-bold fs-1 text-white anton-regular"> 3 + </span>
@@ -40,11 +50,11 @@ function dashboard() {
 						</Col>
 						{/* tri-column end */}
 						{/* 2nd col */}
-						<Col md={6} className="d-flex justify-content-center">
+						<Col ref={rightColRef} md={6} className="d-flex justify-content-center">
 							<Card className="m-0" style={{ border: "none", width: "100%", maxWidth: "450px", aspectRatio: "1" }}>
 								<Card.Img variant='top'
 									src="/placeholder.png"
-									style={{ width: "100%", height: "100%", objectFit: 'cover', objectPosition: 'top' }} />
+									style={{ width: "100%", height: "125%",  marginTop: "-100px", objectFit: 'cover', objectPosition: 'top' }} />
 							</Card>
 						</Col>
 						{/* 2nd col end */}
@@ -76,4 +86,4 @@ function dashboard() {
 	)
 }
 
-export default dashboard
+export default Dashboard

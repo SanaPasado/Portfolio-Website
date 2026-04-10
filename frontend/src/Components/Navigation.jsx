@@ -7,7 +7,7 @@ import {ArrowRightShort} from 'react-bootstrap-icons'
 function Navigation() {
   return (
     <div>
-      <Navbar variant = "light" className = "fixed-top"fluid bg="light" expand="lg">
+      <Navbar variant = "light" className = "fixed-top"fluid bg="light" expand="lg" style={{position: 'fixed'}}>
         <Navbar.Toggle className='ms-2'aria-controls="basic-navbar-nav" />
        <Navbar.Collapse  id="basic-navbar-nav"> 
         <Container className = "d-flex justify-content-between align-items-center ms-2 ms-md-6 mt-2 mb-2 ps-2 ps-md-6 "> 
