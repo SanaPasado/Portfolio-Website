@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Card, Modal, ModalBody, Button, Carousel, CarouselItem, CardBody} from "react-bootstrap";
+import {Row, Col, Card} from "react-bootstrap";
 import './Projects.css';
 
 const projects = [
@@ -34,7 +34,6 @@ const frontendTech = ["React", "React-Bootstrap", "CSS", "Tailwind CSS", "Bootst
 const backendTech = ["MongoDB", "Express", "Django", "Django REST", "Google SMTP", "Gemini API"];
 
 function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null);
   const [hoveredCard, setHoveredCard] = useState(null);
 
   return (

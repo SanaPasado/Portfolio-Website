@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Education.css"
 import { Card, Col, Row } from 'react-bootstrap'
-import AboutMe from './AboutMe'
+
 
 function Education() {
   return (
