@@ -51,10 +51,10 @@ function Dashboard() {
 						{/* tri-column end */}
 						{/* 2nd col */}
 						<Col ref={rightColRef} md={6} className="d-flex justify-content-center">
-							<Card className="m-0" style={{ border: "none", width: "100%", maxWidth: "450px", aspectRatio: "1" }}>
-								<Card.Img variant='top'
-									src="/placeholder.png"
-									style={{ width: "100%", height: "125%",  marginTop: "-100px", objectFit: 'cover', objectPosition: 'top' }} />
+							<Card className="m-0" style={{ border: "", width: "100%", maxWidth: "450px", aspectRatio: "1" }}>
+								<Card.Img className= 'rounded'variant='top'
+									src="/picko.jpg"
+									style={{ filter: 'grayscale(70%)', width: "100%", height: "125%",  marginTop: "-100px", objectFit: 'cover', objectPosition: 'top' }} />
 							</Card>
 						</Col>
 						{/* 2nd col end */}
