@@ -1,8 +1,9 @@
 
 .project-card {
   transition: box-shadow 0.3s, background 0.3s, transform 0.3s, max-height 0.7s cubic-bezier(0.4,0,0.2,1);
-  max-height: 350px;
-  min-height: 200px;
+  max-height: 420px;
+  min-height: 260px;
+  width: 100%;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background: #fff;
@@ -21,6 +22,8 @@
 .project-image {
   object-fit: cover;
   width: 100%;
+  height: auto;
+  display: block;
   aspect-ratio: 16/10;
 }
 
@@ -42,9 +45,14 @@
 
 .project-card.hovered {
   transform: translateY(-10px);
-  max-height: 800px;
+  max-height: 980px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   background: #f8f9fa;
+}
+
+.project-card .card-body {
+  display: flex;
+  flex-direction: column;
 }
 
 .project-extra-info {
@@ -65,6 +73,7 @@
   max-height: 180px;
   min-height: 90px;
 }
+
 .tech-badges {
   display: none;
   flex-wrap: wrap;
@@ -104,6 +113,7 @@
   align-items: center;
   gap: 0.5em;
   transition: border-color 0.2s, color 0.2s;
+  margin-top: auto !important;
 }
 
 .tech-badge.frontend {
@@ -139,14 +149,14 @@
 /* Mobile Responsive */
 @media (max-width: 576px) {
   .project-card {
-    max-height: 300px;
-    min-height: 180px;
-    margin-left: -0.5rem !important;
-    margin-right: -0.5rem !important;
+    max-height: 380px;
+    min-height: 260px;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 
   .project-card.hovered {
-    max-height: 600px;
+    max-height: 760px;
   }
 
   .project-image {
@@ -184,12 +194,12 @@
 /* Tablet */
 @media (min-width: 577px) and (max-width: 992px) {
   .project-card {
-    max-height: 320px;
-    min-height: 190px;
+    max-height: 410px;
+    min-height: 260px;
   }
 
   .project-card.hovered {
-    max-height: 650px;
+    max-height: 820px;
   }
 
   .project-card .card-title {

@@ -69,13 +69,13 @@ function Projects() {
         </p>
         <Col
           md={12}
-          className=" d-flex justify-content-center align-items-center gap-2"
+          className="d-flex justify-content-center align-items-center"
         >
-          <Row>
+          <Row className="g-3 justify-content-center w-100">
             {projects.map((project) => (
-              <Col key={project.title} className="">
+              <Col key={project.title} xs={12} sm={10} md={6} lg={4} className="d-flex">
                 <Card
-                  className={`rounded-0 my-2 border-0 project-card${hoveredCard === project.id ? " hovered" : ""}`}
+                  className={`rounded-0 my-2 border-0 project-card w-100${hoveredCard === project.id ? " hovered" : ""}`}
                   onClick={() =>
                     setHoveredCard(
                       hoveredCard === project.id ? null : project.id,
