@@ -69,7 +69,7 @@ function Dashboard() {
 				<section className="mt-5 w-100" id="about">
 					<Education />
 				</section>
-				<section className="mt-5 w-100" id="contact">
+				<section className="mt-5 p-lg-4 w-100" id="contact">
 					<AboutMe />
 				</section>
 				<Socials />

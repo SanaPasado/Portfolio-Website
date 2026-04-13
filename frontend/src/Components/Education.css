@@ -4,3 +4,16 @@
   font-weight: 600;
   font-style: normal;
 }
+
+/* Mobile responsive adjustments */
+@media (max-width: 576px) {
+  .inter-tight {
+    font-size: clamp(14px, 4vw, 16px);
+  }
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    padding: 1rem 0.5rem !important;
+  }
+}

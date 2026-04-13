@@ -2,6 +2,7 @@
 .project-card {
   transition: box-shadow 0.3s, background 0.3s, transform 0.3s, max-height 0.7s cubic-bezier(0.4,0,0.2,1);
   max-height: 350px;
+  min-height: 200px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background: #fff;
@@ -26,7 +27,11 @@
 /* Project card title - expand on hover */
 .project-card .card-title {
   transition: padding 0.3s ease, transform 0.3s ease;
-
+  min-height: clamp(56px, 8vh, 72px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .project-card:hover .card-title {
@@ -37,13 +42,13 @@
 
 .project-card.hovered {
   transform: translateY(-10px);
-  max-height: 600px;
+  max-height: 800px;
   box-shadow: 0 8px 32px rgba(0,0,0,0.2);
   background: #f8f9fa;
 }
 
 .project-extra-info {
-  transition: opacity 0.3s cubic-bezier(0.4,0,0.2,1), max-height 1s cubic-bezier(0.4,0,0.2,1);
+  transition: opacity 1s cubic-bezier(0.4,0,0.2,1), max-height 1s cubic-bezier(0.4,0,0.2,1);
   opacity: 0;
   max-height: 0px;
   overflow: hidden;
@@ -70,6 +75,7 @@
   display: flex;
 }
 
+
 .tech-badge {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
@@ -81,6 +87,23 @@
   border: 2px solid;
   background: #353030;
   display: inline-block;
+}
+
+.view-project {
+  border: 3px solid #b0b0b0 !important;
+  color: #b0b0b0 !important;
+  background: #232323;
+  border-radius: 2px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3em 1.2em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .tech-badge.frontend {
@@ -117,20 +140,67 @@
 @media (max-width: 576px) {
   .project-card {
     max-height: 300px;
+    min-height: 180px;
+    margin-left: -0.5rem !important;
+    margin-right: -0.5rem !important;
   }
 
   .project-card.hovered {
-    max-height: 500px;
+    max-height: 600px;
   }
 
   .project-image {
     aspect-ratio: 4/3;
   }
+  
+  .project-card .card-title {
+    min-height: 52px;
+    font-size: 0.9rem;
+  }
+  
+  .projects-heading {
+    font-size: clamp(18px, 6vw, 36px);
+    padding: 1.5rem 0.5rem !important;
+    margin-bottom: 1rem !important;
+  }
+  
+  .tech-badge {
+    font-size: 0.65rem;
+    padding: 0.25em 0.7em;
+  }
+  
+  .view-project {
+    font-size: 0.85rem !important;
+    padding: 0.5em 0.8em !important;
+  }
+  
+  .project-extra-info {
+    font-size: 0.85rem;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+  }
 }
 
 /* Tablet */
 @media (min-width: 577px) and (max-width: 992px) {
-  .project-image {
-    aspect-ratio: 16/10;
+  .project-card {
+    max-height: 320px;
+    min-height: 190px;
+  }
+
+  .project-card.hovered {
+    max-height: 650px;
+  }
+
+  .project-card .card-title {
+    min-height: 56px;
+  }
+
+  .projects-heading {
+    font-size: clamp(24px, 7vw, 48px);
+  }
+  
+  .tech-badge {
+    font-size: 0.75rem;
   }
 }

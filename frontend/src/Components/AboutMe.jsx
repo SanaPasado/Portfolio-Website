@@ -12,9 +12,9 @@ function AboutMe() {
         </Card>
       </Col>
       
-      <Col xs={12} md={6} className="d-flex flex-column justify-content-center align-items-center" style={{ minHeight: "100%" }}>
+      <Col xs={12} md={6} className="mt-4 mt-lg-0 d-flex flex-column justify-content-center align-items-center" style={{ minHeight: "100%" }}>
         <Card.Body>
-          <Card.Title className="fs-1 anton-regular text-uppercase text-white text-start">
+          <Card.Title className=" fs-1 anton-regular text-uppercase text-white text-start">
             About Me
           </Card.Title>
           <Card.Text className="fs-5 mt-4 text-white text-start">

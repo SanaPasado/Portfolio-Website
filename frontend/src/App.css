@@ -14,7 +14,24 @@
   font-style: normal;
 }
 #projects, #skills, #about, #contact {
-  scroll-padding-top: 70px; /* Adjust to your navbar height */
+  scroll-padding-top: 80px; /* Adjust to your navbar height */
+}
+
+/* Base responsive font sizing */
+body {
+  font-size: clamp(14px, 2.5vw, 16px);
+}
+
+/* Ensure all containers have proper padding on mobile */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  .container, .container-fluid {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
 }
 .montserrat {
   font-family: 'Montserrat', sans-serif;

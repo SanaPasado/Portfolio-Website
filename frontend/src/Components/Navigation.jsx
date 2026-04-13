@@ -33,11 +33,15 @@ function Navigation() {
          <Nav.Item >
        <Nav.Link className=" fw-bold fs-6  me-3" href="#services">Services</Nav.Link>
       </Nav.Item>
+
+         <Nav.Item >
+       <Nav.Link className=" fw-bold fs-6 me-3 d-lg-none" href="#contact">Contact</Nav.Link>
+      </Nav.Item>
        </Nav>
       </Container>
        
         <Nav>
-   <Nav.Item >
+   <Nav.Item className='d-none d-lg-block' >
        <Nav.Link className=" d-flex align-items-center border-bottom fw-bold fs-6 " href="#contact">Contact <ArrowRightShort className='fs-5'/></Nav.Link>
       </Nav.Item>
         </Nav>
